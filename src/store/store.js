@@ -60,28 +60,31 @@ export const store = new Vuex.Store({
         arrivingAt: "ect...."
       }
     ],
-    journeystartdatesingle: [
-      "2021-01-26",
-      "2021-01-27",
-      "2021-01-28",
-      "2021-01-29"
-    ],
-    journeystarttimesingle: ["12:10:00", "12:20:00", "12:30:00", "12:40:00"],
-    passengertypesingle: [
-      "Adult",
-      "Child",
-      "60+ / Disabled NEC",
-      "Student",
-      "Young Scot 16-18 years",
-      "Young Scot 19-25 years",
-      "GCU Student",
-      "Comp"
-    ],
-    journeyreturndatesingle: [
-      "2021-01-26",
-      "2021-01-27",
-      "2021-01-28",
-      "2021-01-29"
+    passengertypes: [
+      {
+        type: "Adult"
+      },
+      {
+        type: "Child"
+      },
+      {
+        type: "60+ / Disabled NEC"
+      },
+      {
+        type: "Student"
+      },
+      {
+        type: "Young Scot 16-18 years"
+      },
+      {
+        type: "Young Scot 19-25 years"
+      },
+      {
+        type: "GCU Studentult"
+      },
+      {
+        type: "Comp"
+      }
     ]
   },
   getters: {

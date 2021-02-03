@@ -1,7 +1,7 @@
 <template>
   <div id="journey-start">
-    <h2>Journey start</h2>
     <ul>
+      <li><b>Journey start</b></li>
       <li v-for="(journeystart, i) in journeystarts" :key="'a' + i">
         {{ journeystart.leavingFrom }}
       </li>

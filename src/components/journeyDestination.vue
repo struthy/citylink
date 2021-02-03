@@ -1,7 +1,7 @@
 <template>
-  <div id="journey-start">
-    <h2>Journey Destination</h2>
+  <div id="journey-destination">
     <ul>
+      <li><b>Journey Destination</b></li>
       <li v-for="(journeydestination, i) in journeydestinations" :key="'a' + i">
         {{ journeydestination.arrivingAt }}
       </li>
