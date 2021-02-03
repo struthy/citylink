@@ -107,6 +107,12 @@ export const store = new Vuex.Store({
     }
   },
   actions: {
+    reducePrice: context => {
+      setTimeout(function() {
+        context.commit("reducePrice");
+      }, 2000);
+    },
+
     getjourneys({ commit }) {
       axios.get("journeySingle.json").then(response => {
         let journeys = response.data;
