@@ -1,0 +1,83 @@
+[ 
+    {
+      "journeytypes": [
+        {
+          "journeyType": "single / return"
+        },
+        {
+          "journeyType": "Multi journey"
+        },
+        {
+          "journeyType": "Explorer passes"
+        },
+        {
+          "journeyType": "Redeem your pass"
+        }
+      ],
+  
+       "journeystart": [
+        {
+          "leavingFrom": "Glasgow Airport"
+        },
+        {
+          "leavingFrom": "Glasgow Anniesland"
+        },
+        {
+          "leavingFrom": "Glasgow Buchanan Bus Station"
+        },
+        {
+          "leavingFrom": "Glasgow Cathedral Steet"
+        },
+        {
+          "leavingFrom": "ect...."
+        }
+      ],
+      "journeyend": [
+        {
+          "arrivingAt": "Inverness Montague Road"
+        },
+        {
+          "arrivingAt": "Inverness Tomnahurich"
+        },
+        {
+          "arrivingAt": "Inverary"
+        },
+        {
+          "arrivingAt": "Inveraray Brae"
+        },
+        {
+          "arrivingAt": "ect...."
+        }
+      ],
+      "journeystartdate": [
+        "2021-01-26",
+        "2021-01-27",
+        "2021-01-28",
+        "2021-01-29"
+      ],
+      "journeystarttime": [
+        "12:10:00",
+        "12:20:00",
+        "12:30:00",
+        "12:40:00"
+      ],
+      "passengertype": [
+        "Adult",
+        "Child",
+        "60+ / Disabled NEC",
+        "Student",
+        "Young Scot 16-18 years",
+        "Young Scot 19-25 years",
+        "GCU Student",
+        "Comp"
+      ],
+      "journeyreturndate": [
+        "2021-01-26",
+        "2021-01-27",
+        "2021-01-28",
+        "2021-01-29"
+      ]
+    }
+
+    
+  ]

@@ -1,0 +1,80 @@
+{
+   "single":"1",
+   "singlejourneys":{
+      "journeystart":{
+         "1":{
+            "id":"1",
+            "leavingFrom":"Glasgow"
+         },
+         "2":{
+            "id":"2",
+            "leavingFrom":"Glasgow Anniesland"
+         },
+         "3":{
+            "id":"3",
+            "leavingFrom":"Buchanan"
+         },
+         "4":{
+            "id":"4",
+            "leavingFrom":"Sauchihall"
+         }
+      },
+      "journeyend":{
+         "1":{
+            "id":"1",
+            "leavingFrom":"dest 1"
+         },
+         "2":{
+            "id":"2",
+            "leavingFrom":"dest 2"
+         },
+         "3":{
+            "id":"3",
+            "leavingFrom":"dest 3"
+         },
+         "4":{
+            "id":"4",
+            "leavingFrom":"dest 4"
+         }
+      }
+   },
+   "multi":"2",
+   "multijourneys":{
+      "journeystart":{
+         "1":{
+            "id":"1",
+            "leavingFrom":"Glasgow"
+         },
+         "2":{
+            "id":"2",
+            "leavingFrom":"Glasgow Anniesland"
+         },
+         "3":{
+            "id":"3",
+            "leavingFrom":"Buchanan"
+         },
+         "4":{
+            "id":"4",
+            "leavingFrom":"Sauchihall"
+         }
+      },
+      "journeyend":{
+         "1":{
+            "id":"1",
+            "leavingFrom":"dest 1"
+         },
+         "2":{
+            "id":"2",
+            "leavingFrom":"dest 2"
+         },
+         "3":{
+            "id":"3",
+            "leavingFrom":"dest 3"
+         },
+         "4":{
+            "id":"4",
+            "leavingFrom":"dest 4"
+         }
+      }
+   }
+}
