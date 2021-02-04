@@ -23,6 +23,13 @@
           <span class="my-suggestion-item">{{ suggestion.item }}</span>
         </template>
       </vue-autosuggest>
+
+      <h3>data coming from store as example</h3>
+      <ul>
+        <li li v-for="(journeystart, i) in journeystarts" :key="'a' + i">
+          {{ journeystart.leavingFrom }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
