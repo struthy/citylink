@@ -17,7 +17,7 @@
         ]"
         :input-props="{
           id: 'autosuggest__input',
-          placeholder: 'Journey Destination',
+          placeholder: 'Journey Start point',
         }"
         @input="onInputChange"
         @selected="selectHandler"
