@@ -99,10 +99,6 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
-    SET_JOURNEYS(state, journeys) {
-      state.journeys = journeys;
-      console.log(journeys);
-    },
     reducePrice: state => {
       state.journeytypes.forEach(saleJourneytype => {
         saleJourneytype.price -= 1;
@@ -114,13 +110,6 @@ export const store = new Vuex.Store({
       setTimeout(function() {
         context.commit("reducePrice");
       }, 2000);
-    },
-
-    getjourneys({ commit }) {
-      axios.get("journeySingle.json").then(response => {
-        let journeys = response.data;
-        commit("SET_JOURNEYS", journeys);
-      });
     }
   }
 });
