@@ -2,31 +2,7 @@
   <div id="app">
     <div class="widget__container">
       <journey-type></journey-type>
-      <vue-autosuggest
-        :suggestions="[
-          {
-            data: [
-              'Glasgow Airport',
-              'Glasgow Anniesland',
-              'Glasgow Buchanan Bus Station',
-              'Glasgow Cathedral Steet',
-              'Faramir',
-              'ect....',
-            ],
-          },
-        ]"
-        :input-props="{
-          id: 'autosuggest__input',
-          placeholder: 'Journey Start point',
-        }"
-        @input="onInputChange"
-        @selected="selectHandler"
-        @click="clickHandler"
-      >
-        <template slot-scope="{ suggestion }">
-          <span class="my-suggestion-item">{{ suggestion.item }}</span>
-        </template>
-      </vue-autosuggest>
+      <auto-complete></auto-complete>
       <journey-destination></journey-destination>
       <passenger-type></passenger-type>
     </div>
@@ -38,7 +14,7 @@ import JourneyType from "./components/journeyType.vue";
 import journeyStart from "./components/journeyStart.vue";
 import journeyDestination from "./components/journeyDestination.vue";
 import passengerType from "./components/passengerType.vue";
-import { VueAutosuggest } from "vue-autosuggest";
+import autocomplete from "./components/Autocomplete.vue";
 export default {
   name: "app",
   components: {
@@ -46,7 +22,7 @@ export default {
     "journey-start": journeyStart,
     "journey-destination": journeyDestination,
     "passenger-type": passengerType,
-    VueAutosuggest,
+    "auto-complete": autocomplete,
   },
 
   data: function () {

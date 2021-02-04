@@ -1,85 +1,40 @@
 <template>
-  <div style="position: relative" v-bind:class="{ open: openSuggestion }">
-    <input
-      class="form-control"
-      type="text"
-      v-model="selection"
-      @keydown.enter="enter"
-      @keydown.down="down"
-      @keydown.up="up"
-      @input="change"
-    />
-    <ul class="dropdown-menu" style="width: 100%">
-      <li
-        vv-for="(journeystart, i) in matches"
-        :key="'a' + i"
-        v-bind:class="{ active: isActive($index) }"
-        @click="suggestionClick($index)"
+  <div id="journey-start">
+    <div class="widget__select">
+      <vue-autosuggest
+        :suggestions="[
+          {
+            data: [
+              'Glasgow Airport',
+              'Glasgow Anniesland',
+              'Glasgow Buchanan Bus Station',
+              'Glasgow Cathedral Steet',
+              'Faramir',
+              'ect....',
+            ],
+          },
+        ]"
+        :input-props="{
+          id: 'autosuggest__input',
+          placeholder: 'Journey Start point',
+        }"
       >
-        <a href="#">{{ journeystart.leavingFrom }}</a>
-      </li>
-    </ul>
+        <template slot-scope="{ suggestion }">
+          <span class="my-suggestion-item">{{ suggestion.item }}</span>
+        </template>
+      </vue-autosuggest>
+    </div>
   </div>
 </template>
-
-
 <script>
+import { VueAutosuggest } from "vue-autosuggest";
 export default {
-  data() {
-    return {
-      open: false,
-      current: 0,
-    };
-  },
-  props: {
-    journeystarts: {
-      type: Array,
-      required: true,
-    },
-    selection: {
-      type: String,
-      required: true,
-      twoWay: true,
-    },
+  components: {
+    VueAutosuggest,
   },
   computed: {
     journeystarts() {
       return this.$store.state.journeystarts;
-    },
-    matches() {
-      return this.journeystart.leavingFrom.filter((str) => {
-        return str.indexOf(this.selection) >= 0;
-      });
-    },
-    openSuggestion() {
-      return (
-        this.selection !== "" && this.matches.length != 0 && this.open === true
-      );
-    },
-  },
-  methods: {
-    enter() {
-      this.selection = this.matches[this.current];
-      this.open = false;
-    },
-    up() {
-      if (this.current > 0) this.current--;
-    },
-    down() {
-      if (this.current < this.matches.length - 1) this.current++;
-    },
-    isActive(index) {
-      return index === this.current;
-    },
-    change() {
-      if (this.open == false) {
-        this.open = true;
-        this.current = 0;
-      }
-    },
-    suggestionClick(index) {
-      this.selection = this.matches[index];
-      this.open = false;
     },
   },
 };
