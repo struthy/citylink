@@ -1,15 +1,15 @@
 <template>
   <div id="journey-start">
     <div class="widget__select">
-      <ul>
+      <!-- <ul>
         <li><b>data coming from store as example</b></li>
         <li li v-for="(journeystart, i) in journeystarts" :key="'a' + i">
           {{ journeystart.leavingFrom }}
         </li>
-      </ul>
+      </ul> -->
 
       <div class="autocomplete">
-        <h3>Journey Start points</h3>
+        <h3>{{ formLabel }}</h3>
         <input
           type="text"
           @click="onChange"
@@ -51,6 +51,7 @@ export default {
   },
 
   props: {
+    formLabel: String,
     items: {
       type: Array,
       required: false,

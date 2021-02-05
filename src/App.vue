@@ -5,8 +5,8 @@
 
       <div v-if="selectedJourneyType == 'single / return'" id="single-journey">
         <auto-complete
+          form-label="From"
           :items="[
-            'Aberdeen central',
             'Glasgow Airport',
             'Glasgow Anniesland',
             'Glasgow Buchanan Bus Station',
@@ -14,7 +14,18 @@
             'ect....'
           ]"
         />
-        <journey-destination></journey-destination>
+
+        <auto-complete
+          form-label="To"
+          :items="[
+            'Inverness Montague Road',
+            'Inverness Tomnahurich',
+            'Inverary',
+            'Inveraray Brae',
+            'ect....'
+          ]"
+        />
+
         <passenger-type></passenger-type>
       </div>
 
