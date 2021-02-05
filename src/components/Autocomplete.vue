@@ -1,14 +1,15 @@
 <template>
   <div id="journey-start">
     <div class="widget__select">
-      <h3>data coming from store as example</h3>
       <ul>
+        <li><b>data coming from store as example</b></li>
         <li li v-for="(journeystart, i) in journeystarts" :key="'a' + i">
           {{ journeystart.leavingFrom }}
         </li>
       </ul>
 
       <div class="autocomplete">
+        <h3>Journey Start points</h3>
         <input
           type="text"
           @click="onChange"
