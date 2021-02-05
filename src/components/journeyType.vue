@@ -2,7 +2,7 @@
   <div id="journey-type">
     <div class="widget__select">
       <label class="widget__select--label">Type</label>
-      <select v-model="selectedjourneytype">
+      <select v-model="selectedJourneyType">
         <option
           v-for="(journeytype, i) in journeytypes"
           :key="'journeytypes' + i"
@@ -28,7 +28,7 @@ export default {
       return this.$store.getters.saleJourneytypes;
     },
 
-    selectedjourneytype: {
+    selectedJourneyType: {
       get() {
         return this.$store.state.selectedJourneyType;
       },

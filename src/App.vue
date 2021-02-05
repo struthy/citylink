@@ -3,17 +3,17 @@
     <form id="journey-details">
       <journey-type></journey-type>
 
-      <div v-if="selectedjourneytype == 'single / return'" id="single-journey">
+      <div v-if="selectedJourneyType == 'single / return'" id="single-journey">
         <auto-complete></auto-complete>
         <journey-destination></journey-destination>
         <passenger-type></passenger-type>
       </div>
 
-      <div v-if="selectedjourneytype == 'Multi journey'" id="multi-journey">
+      <div v-if="selectedJourneyType == 'Multi journey'" id="multi-journey">
         <h3>Multi Journey</h3>
       </div>
 
-      <div v-if="selectedjourneytype == 'Explorer passes'" id="explorer-pass">
+      <div v-if="selectedJourneyType == 'Explorer passes'" id="explorer-pass">
         <h3>explorer pass</h3>
       </div>
     </form>
@@ -49,7 +49,7 @@ export default {
       return this.$store.getters.saleJourneytypes;
     },
 
-    selectedjourneytype: {
+    selectedJourneyType: {
       get() {
         return this.$store.state.selectedJourneyType;
       },
