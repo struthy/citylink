@@ -3,17 +3,17 @@
     <form id="journey-details">
       <journey-type></journey-type>
 
-      <div id="single-journey">
+      <div v-if="selectedjourneytype == 'single / return'" id="single-journey">
         <auto-complete></auto-complete>
         <journey-destination></journey-destination>
         <passenger-type></passenger-type>
       </div>
 
-      <div id="multii-journey">
+      <div v-if="selectedjourneytype == 'Multi journey'" id="multi-journey">
         <h3>Multi Journey</h3>
       </div>
 
-      <div id="explorer-pass">
+      <div v-if="selectedjourneytype == 'Explorer passes'" id="explorer-pass">
         <h3>explorer pass</h3>
       </div>
     </form>
@@ -38,6 +38,25 @@ export default {
 
   data: function () {
     return {};
+  },
+
+  computed: {
+    journeytypes() {
+      return this.$store.state.journeytypes;
+    },
+
+    saleJourneytypes() {
+      return this.$store.getters.saleJourneytypes;
+    },
+
+    selectedjourneytype: {
+      get() {
+        return this.$store.state.selectedJourneyType;
+      },
+      set(value) {
+        this.$store.commit("updateSelectedJourneyType", value);
+      },
+    },
   },
 };
 </script>
