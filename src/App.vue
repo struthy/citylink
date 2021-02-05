@@ -4,7 +4,16 @@
       <journey-type></journey-type>
 
       <div v-if="selectedJourneyType == 'single / return'" id="single-journey">
-        <auto-complete></auto-complete>
+        <auto-complete
+          :items="[
+            'Aberdeen central',
+            'Glasgow Airport',
+            'Glasgow Anniesland',
+            'Glasgow Buchanan Bus Station',
+            'Glasgow Cathedral Steet',
+            'ect....'
+          ]"
+        />
         <journey-destination></journey-destination>
         <passenger-type></passenger-type>
       </div>
@@ -33,10 +42,10 @@ export default {
     "journey-start": journeyStart,
     "journey-destination": journeyDestination,
     "passenger-type": passengerType,
-    "auto-complete": autocomplete,
+    "auto-complete": autocomplete
   },
 
-  data: function () {
+  data: function() {
     return {};
   },
 
@@ -55,9 +64,9 @@ export default {
       },
       set(value) {
         this.$store.commit("updateSelectedJourneyType", value);
-      },
-    },
-  },
+      }
+    }
+  }
 };
 </script>
 
@@ -69,4 +78,3 @@ export default {
   flex: 1 1 100%;
 }
 </style>
-
