@@ -85,7 +85,9 @@ export const store = new Vuex.Store({
       {
         type: "Comp"
       }
-    ]
+    ],
+
+    selectedJourneyType: "single / return"
   },
   getters: {
     saleJourneytypes: state => {

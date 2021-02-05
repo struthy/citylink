@@ -1,11 +1,16 @@
 <template>
   <div id="app">
-    <div class="widget__container">
+    <form id="journey-details">
       <journey-type></journey-type>
-      <auto-complete></auto-complete>
-      <journey-destination></journey-destination>
-      <passenger-type></passenger-type>
-    </div>
+      <div id="single journey">
+        <auto-complete></auto-complete>
+        <journey-destination></journey-destination>
+        <passenger-type></passenger-type>
+      </div>
+      <div id="Multi journey">
+        <h3>Multi Journey</h3>
+      </div>
+    </form>
   </div>
 </template>
 

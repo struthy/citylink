@@ -2,7 +2,7 @@
   <div id="journey-type">
     <div class="widget__select">
       <label class="widget__select--label">Type</label>
-      <select v-model="selected">
+      <select v-model="selectedjourneytype">
         <option
           v-for="(journeytype, i) in journeytypes"
           :key="'journeytypes' + i"
@@ -16,9 +16,7 @@
 <script>
 export default {
   data: function () {
-    return {
-      selected: "single / return",
-    };
+    return {};
   },
 
   computed: {
@@ -28,6 +26,15 @@ export default {
 
     saleJourneytypes() {
       return this.$store.getters.saleJourneytypes;
+    },
+
+    selectedjourneytype: {
+      get() {
+        return this.$store.state.selectedJourneyType;
+      },
+      set(value) {
+        this.$store.commit("updateSelectedJourneyType", value);
+      },
     },
   },
 
