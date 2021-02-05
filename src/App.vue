@@ -2,13 +2,19 @@
   <div id="app">
     <form id="journey-details">
       <journey-type></journey-type>
-      <div id="single journey">
+
+      <div id="single-journey">
         <auto-complete></auto-complete>
         <journey-destination></journey-destination>
         <passenger-type></passenger-type>
       </div>
-      <div id="Multi journey">
+
+      <div id="multii-journey">
         <h3>Multi Journey</h3>
+      </div>
+
+      <div id="explorer-pass">
+        <h3>explorer pass</h3>
       </div>
     </form>
   </div>
