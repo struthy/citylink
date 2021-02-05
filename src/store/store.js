@@ -101,10 +101,8 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
-    reducePrice: state => {
-      state.journeytypes.forEach(saleJourneytype => {
-        saleJourneytype.price -= 1;
-      });
+    updateSelectedJourneyType(state, selectedJourneyType) {
+      state.selectedJourneyType = selectedJourneyType;
     }
   },
   actions: {
