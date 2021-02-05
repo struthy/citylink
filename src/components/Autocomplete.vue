@@ -17,7 +17,7 @@
           v-model="search"
           @keydown.down="onArrowDown"
           @keydown.up="onArrowUp"
-          @keydown.enter="onEnter"
+          @keydown.enter.prevent="onEnter"
         />
         <ul
           id="autocomplete-results"
@@ -112,7 +112,6 @@ export default {
       this.search = this.results[this.arrowCounter];
       this.isOpen = false;
       this.arrowCounter = -1;
-      console.log("enter");
     },
     handleClickOutside(evt) {
       if (!this.$el.contains(evt.target)) {
